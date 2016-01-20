@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!-- 如果在代码 R.layout.activity_main -->
+    <!--
+    如果在XML @string/hello_world 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    -->
+
+
+    <!-- 不会重合,分为水平(默认)和垂直 -->
+
+    <EditText
+        android:id="@+id/eidt_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/txt_num" />
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="call" />
+
+    <EditText
+        android:id="@+id/eidt_http"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+    <Button
+        android:onClick="goUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="go" />
+    
+     <Button
+        android:layout_width="240px"
+        android:layout_height="wrap_content"
+        android:text="go" />
+     <Button
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="go" />
+    
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!--
+        1：RelativeLayout: 相对布局按钮左上角为原点.支持组件重叠,
+        2：相对布局总是依赖其他的组件进行布局.包括依赖父元素
+        3: 之前线性布局的参数对相对是无效的
+        
+        1：对于父组件: alignParen*** 父窗体的上下左右   center***  居中
+        2: 对于某个组件: layout_to***Of   在当前组件的 上下左右.... 注意不是对齐
+        2： 对于某个组件: layout_align***：当前组件上下左右对齐
+                   -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="第一个按钮" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="第一个按钮" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="第一个按钮" />
+
+    <Button
+        android:id="@+id/btn_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="中心" />
+    
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/btn_center"
+        android:layout_above="@id/btn_center"
+        android:text="左上" />
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_center"
+        android:layout_alignTop="@id/btn_center"
+        android:text="右边" />
+     
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/btn_center"
+        android:layout_alignTop="@id/btn_center"
+        android:text="右边" />
+    
+
+</RelativeLayout>
